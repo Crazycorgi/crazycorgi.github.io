@@ -1,6 +1,1065 @@
 <title>Clock</title>
+
+<!DOCTYPE html>
+<html lang="en" >
+
 <head>
-  <p>
-    There will be a clock here soon. I just have to export it to github!
-  </p>
+  <meta charset="UTF-8">
+  <title>Clock</title>
+
+
+
+      <link rel="stylesheet" href="css/style.css">
+
+
 </head>
+
+<body>
+
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<div id="buttons">
+<p id="build"><b>Full Release</b> | Build: 1.3</p>
+
+<button id="Customize" class="customize" title="Customize The Clock">Customize<i class='fas fa-palette' style="padding-left: .5em;"></i></button>
+<a class="customize" href="https://goo.gl/forms/sH6U69ddsj8ZqpbX2" target="_blank" title="Suggest something here!">Suggestions<i class='fas fa-inbox' style="padding-left: .5em;"></i></a>
+  <button onclick="setTimeout(startup, 10)" id="helpBtn" class="customize" title="Click here for help!">Help<i class='fa fa-question-circle' style="padding-left: .5em;"></i></button>
+<!--
+<a class="poll" href="" target="_blank" title="Poll!">Poll 4!<i class='fas fa-list' style="padding-left: .5em;"></i></a>
+-->
+</div>
+
+<html>
+<body onload="startTime()">
+
+<div id="MyClockDisplay" class="clock"></div>
+<div id="ind" class="clock1"></div>
+  <div id="mi" class="clock1"></div>
+</body>
+</html>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <p><b>Customize</b></p>
+    </div>
+    <div class="modal-body">
+      <h2>Themes:</h2>
+      <div class="theme">
+  <button class ="theme theme1" value="default" title="Light Green Theme" onclick="suggest('#49bb8b')">Light Green</button>
+  <button class ="theme theme2" value="calm" title="Light Blue Theme" onclick="suggest('#7da6bb')">Light Blue</button>
+  <button class ="theme theme3" value="light"title="White Theme (Default)">White (Default)</button>
+        <button class ="theme theme11" value="black" title="Dark Theme">Dark</button>
+  <button class ="theme theme4" value="darker" title="Discord Theme">Discord</button>
+  <button class ="theme theme5" value="matrix" title="Matrix Theme">Matrix</button>
+  <button class ="theme theme6" value="evil" title="Evil Theme">Evil</button>
+  <button class ="theme theme7" value="orange" title="Orange Theme">Orange</button>
+<button class ="theme theme8" value="sky" title="Sky Theme">Sky</button>
+  <button class ="theme theme9" value="purple" title="Purple Theme">Purple</button>
+  <button class ="theme theme10" value="pink" title="Pink Theme">Pink</button>
+</div>
+      <h2>Font:</h2>
+      <p><b>Note:</b> Different fonts can change the size of the text so you should change the text size to match your screen size!</p>
+      <div class="font">
+  <button class ="fontt font1" value="raleway" title="Raleway Font">Raleway</button>
+  <button class ="fontt font2" value="coiny" title="Coiny  Font">Coiny</button>
+  <button class ="fontt font3" value="Orbitron"title="Orbitron Font">Orbitron</button>
+  <button class ="fontt font4" value="SIL" title="Shadows Into Light Font">Shadows Into Light</button>
+  <button class ="fontt font5" value="ZCOQ" title="ZCOOL QingKe HuangYou Font">ZCOOL QingKe HuangYou</button>
+  <button class ="fontt font6" value="Arial" title="Arial Font">Arial</button>
+  <button class ="fontt font7" value="TNR" title="Times New Romans Font">Times New Roamans (Default)</button>
+  <button class ="fontt font8" value="Roboto" title="Roboto Font">Roboto</button>
+  <button class ="fontt font9" value="CS" title="Coming Soom Font">Coming Soon</button>
+<button class ="fontt font10" value="ASC" title="Amatic SC Font">Amatic SC</button>
+<button class ="fontt font11" value="IF" title="Indie Flower Font">Indie Flower</button>
+<button class ="fontt font12" value="Lobster" title="Lobster Font">Lobster</button>
+<button class ="fontt font13" value="Pacifico" title="Pacifico Font">Pacifico</button>
+<button class ="fontt font14" value="Srisakdi" title="Srisakdi Font">Srisakdi</button>
+<button class ="fontt font15" value="Teko" title="Teko Font">Teko</button>
+        <button class ="fontt font16" value="SE" title="Special ELite Font">Special Elite</button>
+        <button class ="fontt font17" value="PS" title="Pinyon Script Font">Pinyon Script</button>
+        <button class ="fontt font18" value="Sacramento" title="Sacramento Font">Sacramento</button>
+        <button class ="fontt font19" value="Asul" title="Asul Font">Asul</button>
+        <button class ="fontt font20" value="CO" title="Concert One Font">Concert One</button>
+        <button class ="fontt font21" value="Fruktur" title="Fruktur Font">Fruktur</button>
+        <button class ="fontt font22" value="Kavoon" title="Kavoon Font">Kavoon</button>
+        <button class ="fontt font23" value="SM" title="Space Mono Font">Space Mono</button>
+        <button class ="fontt font24" value="Tillana" title="Tillana Font">Tillana</button>
+
+
+</div>
+
+      <h2>Font Size:</h2>
+<div class="size">
+  <button class ="sizee" value="a1" title="Size auto-adjusts to your screen height">Auto (Height)</button>
+  <button class ="sizee" value="a2" title="Size auto-adjusts to your screen width">Auto (Width)</button>
+  <button class ="sizee" value="small"title="Small Size">Small</button>
+  <button class ="sizee" value="medium" title="Medium Size">Medium</button>
+  <button class ="sizee" value="large" title="Large Size">Large</button>
+  <button class ="sizee" value="xlarge" title="Extra Large Size">Extra Large</button>
+  <button class ="sizee" value="huge" title="Huge  Size">Huge!</button>
+  <button class ="sizee" value="insane" title="Insane  Size">Insane!!</button>
+</div>
+      <h2>Text Align</h2>
+<div class="align">
+  <button class ="sizee" value="left" title="The text aligns to the left"><i class='fas fa-arrow-left' style="padding-right: .5em;"></i>Left Align</button>
+  <button class ="sizee" value="center" title="The text aligns to the center">Center Align<i class='fas fa-dot-circle' style="padding-left: .5em;"></i></button>
+  <button class ="sizee" value="right" title="The text aligns to the center">Right Align<i class='fas fa-arrow-right' style="padding-left: .5em;"></i></button>
+
+</div>
+      <h2>Text Shadow</h2>
+
+
+  <button class="apply" onclick="changeTextShadow()" title="Change the shadow"><i class='fas fa-check-circle' style="padding-right: .5em;"></i>Change Text Shadow</button>
+      <br> <br>
+      <a class="help" href="https://codepen.io/Crazycorgi/full/QPbrXy" target="_blank" title="Help for shadow">Help<i class='fas fa-question' style="padding-left: .5em;"></i></a>
+
+      <p id="current"></p>
+      <p id="suggested"></p>
+      <!--<button  id="copyy" class="apply">Copy<i class='far fa-copy' style="padding-left: .5em;"></i></button> -->
+
+<p> If you have any suggestions, make sure to click the suggestion button and fill the forum out!</p>
+    </div>
+    <div class="modal-footer">
+      <h3>Have a good day!</h3>
+    </div>
+  </div>
+</div>
+
+
+<p class="space"></p>
+<button onclick="hideShow()" class="hide hide1">Buttons</button>
+
+<button onclick="hSS()" class="hide hide3">Draggable Thing</button>
+<button onclick="hSSS()" class="hide hide4">PM/AM Indicator</button>
+
+<!-- Draggable DIV -->
+<div id="mydiv">
+  <!-- Include a header DIV with the same name as the draggable DIV, followed by "header" -->
+  <div id="mydivheader"><b>Draggable Thing</b></div>
+  <forum>
+<input type="text" name="firstname" placeholder="(Type Here!)" id="textbox">
+</forum>
+</div>
+
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
+
+
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Coiny|Coming+Soon|EB+Garamond|Indie+Flower|Lobster|Orbitron|Pacifico|Raleway|Roboto|Shadows+Into+Light|Srisakdi|Teko|ZCOOL+QingKe+HuangYou|Special+Elite|Pinyon+Script|Sacramento|Asul|Concert+One|Fruktur|Kavoon|Space+Mono|Tillana');
+
+
+  #build {
+    text-align: center;
+    top: 10px;
+    font-family: Raleway
+  }
+  .c1 {
+    padding-top: 8em;
+  }
+  .change {
+    font-size: 1.2em;
+    font-family: var(--font, white);
+  }
+
+  body {
+    transition-duration: 0.4s;
+    background-color: var(--bg, white);
+    color: var(--bg-text-c, black);
+  }
+
+  .clock {
+    padding-top: 26px;
+    text-align: var(--align, black);
+    font-size: 40vh; /*22vw*/
+    font-family: Raleway;
+    font-family: var(--font, white);
+    font-size: var(--size, white);
+  }
+
+
+  .customize {
+    font-size: 2vw;
+    font-family: var(--font, white);
+    padding: 5px 10px;
+    border-radius: 30px;
+    animation: borderr 3s infinite;
+    outline: none;
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .customize:hover {
+    /*background-color: #2C2F33; */
+    /*color: white; */
+    color: var(--bg-text-c, black);
+    background-color: var(--bg, white);}
+  .customize:focus {color: blue;}
+
+  .poll{
+    animation: backr 3s infinite;
+    font-size: 2vw;
+    font-family: var(--font, white);
+    padding: 5px 10px;
+    border-radius: 30px;
+    outline: none;
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    border: 2px solid red;
+  }
+  .poll:focus{color:blue;}
+
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 20px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+  }
+
+  /* Add Animation */
+  @-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  @keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+  }
+
+  /* The Close Button */
+  .close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .modal-header {
+    padding: 1px 34px;
+    background-image: linear-gradient(to right, blue, aqua);
+    color: white;
+    font-family: arial;
+    font-size: 1.8em;
+    font-family: var(--font, white);
+  }
+
+  .modal-body {
+    padding: 2px 16px;
+    font-family: Raleway;
+    font-size: 1.3em;
+    background-color: var(--bg, white);
+    color: var(--bg-text-c, black);
+    transition-duration: 0.4s;
+    font-family: var(--font, white);
+  }
+
+  .modal-footer {
+    padding: 2px 16px;
+    background-image: linear-gradient(to right, green , lightgreen);
+    color: white;
+    font-family: arial;
+    font-family: var(--font, white);
+  }
+
+  ::selection {
+    background-color: #00af51;
+    color: #fff;
+  }
+
+  .theme {
+    outline: none;
+    border-radius: 30px;
+    transition-duration: .4s;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  .theme:focus {color: blue;}
+  .theme1 {
+    background-color: white;
+    color: black;
+    border: 2px solid #3affb3;
+  }
+  .theme1:hover {background-color: #3affb3}
+  .theme1:focus {color: blue;}
+
+  .theme2 {
+    background-color: white;
+    color: black;
+    border: 2px solid #B3E5FC;
+  }
+  .theme2:hover {background-color: #B3E5FC}
+  .theme2:focus {color: blue;}
+
+  .theme3 {
+    background-color: white;
+    color: black;
+    border: 2px solid lightgrey;
+  }
+  .theme3:hover {background-color: lightgrey}
+  .theme4:focus {color: blue;}
+
+  .theme4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #2C2F33;
+  }
+  .theme4:hover {background-color: #2C2F33;
+                  color: white}
+  .theme4:focus {color: blue;}
+
+  .theme5 {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+  .theme5:hover {background-color: black;
+                  color: #00FF00;}
+  .theme5:focus {color: blue;}
+
+  .theme6 {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+  .theme6:hover {background-color: black;
+                  color: red;}
+  .theme6:focus {color: blue;}
+
+  .theme7 {
+    background-color: white;
+    color: black;
+    border: 2px solid darkgreen;
+  }
+  .theme7:hover {background-color: darkgreen;
+                  color: #ff6e00;}
+  .theme7:focus {color: blue;}
+
+  .theme8 {
+    background-color: white;
+    color: black;
+    border: 2px solid #00bfff;
+  }
+  .theme8:hover {background-color: #00bfff;
+                  color: white;}
+  .theme8:focus {color: blue;}
+
+  .theme9 {
+    background-color: white;
+    color: black;
+    border: 2px solid purple;
+  }
+  .theme9:hover {background-color: purple;
+                  color: white;}
+  .theme9:focus {color: blue;}
+
+  .theme10 {
+    background-color: white;
+    color: black;
+    border: 2px solid #ff6699;
+  }
+  .theme10:hover {background-color: #ff6699;
+                  color: white;}
+  .theme10:focus {color: blue;}
+
+  .theme11 {
+    background-color: white;
+    color: black;
+    border: 2px solid black;
+  }
+  .theme11:hover {background-color: black;
+                  color: white;}
+  .theme11:focus {color: blue;}
+
+  .fontt {
+    outline: none;
+    border-radius: 30px;
+    transition-duration: .4s;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: white;
+  }
+  .fontt{border: 2px solid #191a1d;}
+  .fontt:hover {background-color: #35373d; color: lightgrey}
+  .fontt:active {
+    background-color: #191a1d;
+    color: white;
+  }
+  .fontt:focus {color:blue;}
+  .font1 {font-family: Raleway;}
+  .font2 {font-family: Coiny;}
+  .font3 {font-family: Orbitron;}
+  .font4 {font-family: Shadows Into Light;}
+  .font5 {font-family: ZCOOL QingKe HuangYou;}
+  .font6 {font-family: Arial;}
+  .font7 {font-family: Times New Romans;}
+  .font8 {font-family: Roboto;}
+  .font9 {font-family: Coming Soon;}
+  .font10{font-family: Amatic SC;}
+  .font11{font-family: Indie Flower;}
+  .font12{font-family: Lobster;}
+  .font13{font-family: Pacifico;}
+  .font14{font-family: Srisakdi;}
+  .font15{font-family: Teko;}
+  .font16{font-family: Special Elite;}
+  .font17{font-family: Pinyon Script;}
+  .font18{font-family: Sacramento;}
+  .font19{font-family: Asul;}
+  .font20{font-family: Concert One;}
+  .font21{font-family: Fruktur;}
+  .font22{font-family: Kavoon;}
+  .font23{font-family: Space Mono;}
+  .font24{font-family: Tillana}
+
+
+  .sizee {
+    outline: none;
+    border-radius: 30px;
+    transition-duration: .4s;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid #191a1d;
+  }
+  .sizee:hover {background-color: #35373d; color: lightgrey}
+  .sizee:active {
+    background-color: #191a1d;
+    color: white;
+  }
+  .sizee:focus {color: blue;}
+
+
+  @keyframes borderr {
+    0%   {border: 2px solid red;    }
+    15%  {border: 2px solid orange; }
+    30%  {border: 2px solid yellow; }
+    45%  {border: 2px solid green;  }
+    60%  {border: 2px solid blue;   }
+    75%  {border: 2px solid indigo; }
+    100% {border: 2px solid red;    }
+  }
+
+
+  @keyframes backr {
+    0%   {background-color: red;    }
+    15%  {background-color: orange; }
+    30%  {background-color: yellow; }
+    45%  {background-color: green;  }
+    60%  {background-color: blue;   }
+    75%  {background-color: indigo; }
+    100% {background-color: red;    }
+  }
+
+  .hide{
+    font-size: 16px;
+    font-family: var(--font, white);
+    padding: 5px 10px;
+    border-radius: 30px;
+    outline: none;
+    transition-duration: 0.4s;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+    border: 2px solid grey;
+    float: right;
+  }
+  .hide:hover {
+    color: var(--bg-text-c, black);
+    background-color: var(--bg, white);}
+  .hide:focus {color: blue;}
+
+
+
+  .space{padding-top: 30vh;}
+
+
+  #mydiv {
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    border: 1px solid var(--bg-text-c, black);
+    text-align: center;
+    font-family: var(--font, white);
+    font-size: 22px;
+  }
+  #mydivheader {
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+    background-color: var(--bg, white);
+    color: var(--bg-text-c, black);
+    font-family: var(--font, white);
+  }
+  #textbox{
+    background-color: var(--bg, white);
+    color: var(--bg-text-c, black);
+    border: 0px solid var(--bg-text-c, black);
+    padding: 6px 12px;
+    text-align: center;
+    font-family: var(--font, white);
+    font-size: 20px;
+  }
+
+  .apply {
+    outline: none;
+    border-radius: 30px;
+    transition-duration: .4s;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: white;
+    border: 2px solid #191a1d;
+  }
+  .apply:hover {background-color: #35373d; color: lightgrey}
+  .apply:active {
+    background-color: #191a1d;
+    color: green;
+  }
+  .apply:focus {color: green;}
+
+
+  .clock1{
+    text-align: var(--align, black);
+    font-size: 40vh; /*22vw*/
+    font-family: Raleway;
+    font-family: var(--font, white);
+    font-size: var(--size2, white);
+    text-shadow: var(--shadow, white);
+
+  }
+
+
+  .help {
+    outline: none;
+    border-radius: 30px;
+    transition-duration: .4s;
+    font-size: 16px;
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    font-family: Arial
+  }
+  .help{border: 2px solid #191a1d;}
+  .help:hover {background-color: #35373d; color: lightgrey}
+  .help:active {
+    background-color: #191a1d;
+    color: white;
+  }
+  .help:focus {color:blue;}
+
+</style>
+
+<script>
+
+  function showTime(){
+  				var date = new Date();
+  				var h = date.getHours(); // 0 - 23
+  				var m = date.getMinutes(); // 0 - 59
+  				var s = date.getSeconds(); // 0 - 59
+          var p = date.getMilliseconds(); // 0 - 999
+  				var session = "AM";
+
+  				if(h == 0){
+  					h = 12;
+  				}
+
+  				if(h > 12){
+  					h = h - 12;
+  					session = "PM";
+  				}
+
+  				h = (h < 10) ? "0" + h : h;
+  				m = (m < 10) ? "0" + m : m;
+  				s = (s < 10) ? "0" + s : s;
+
+
+  				var time = h + ":" + m + ":" + s;
+          var pmAM = session
+  				document.getElementById("MyClockDisplay").innerText = time;
+  				document.getElementById("MyClockDisplay").textContent = time;
+
+
+  document.getElementById("ind").innerText = pmAM;
+  document.getElementById("ind").textContent = pmAM;
+
+
+  				setTimeout(showTime, 10);
+  			}
+
+  			showTime();
+
+
+  const root = document.documentElement
+  const themeBtns = document.querySelectorAll('.theme > button')
+
+  themeBtns.forEach((btn) => {
+    btn.addEventListener('click', handleThemeUpdate)
+  })
+
+  function handleThemeUpdate(e) {
+    switch(e.target.value) {
+      case 'default':
+        root.style.setProperty('--bg', '#3affb3')
+        root.style.setProperty('--bg-text-c', 'black')
+        Toastify({ text: "Theme Changed to Light Green!", backgroundColor: "#3affb3",}).showToast();
+        break
+      case 'calm':
+        root.style.setProperty('--bg', '#B3E5FC')
+        root.style.setProperty('--bg-text-c', 'black')
+        Toastify({ text: "Theme Changed to Light Blue!", backgroundColor: "#B3E5FC",}).showToast();
+        break
+      case 'light':
+        root.style.setProperty('--bg', 'white')
+        root.style.setProperty('--bg-text-c', 'black')
+        Toastify({ text: "Theme Changed to White!", backgroundColor: "grey",}).showToast();
+        break
+       case 'black':
+        root.style.setProperty('--bg', 'black')
+        root.style.setProperty('--bg-text-c', 'white')
+        Toastify({ text: "Theme Changed to Dark!", backgroundColor: "#2C2F33",}).showToast();
+        break
+       case 'darker':
+        root.style.setProperty('--bg', '#2C2F33')
+        root.style.setProperty('--bg-text-c', 'white')
+        Toastify({ text: "Theme Changed to Black!", backgroundColor: "black",}).showToast();
+        break
+       case 'evil':
+        root.style.setProperty('--bg', 'black')
+        root.style.setProperty('--bg-text-c', 'red')
+        Toastify({ text: "Theme Changed to Evil!", backgroundColor: "black",}).showToast();
+        break
+        case 'matrix':
+        root.style.setProperty('--bg', 'black')
+        root.style.setProperty('--bg-text-c', '#00FF00')
+        Toastify({ text: "Theme Changed to Matrix!", backgroundColor: "black",}).showToast();
+        break
+       case 'orange':
+        root.style.setProperty('--bg', 'darkgreen')
+        root.style.setProperty('--bg-text-c', '#ff6e00')
+        Toastify({ text: "Theme Changed to Orange!", backgroundColor: "darkgreen",}).showToast();
+        break
+       case 'sky':
+        root.style.setProperty('--bg', '#00bfff')
+        root.style.setProperty('--bg-text-c', 'white')
+        Toastify({ text: "Theme Changed to Sky!", backgroundColor: "#00bfff",}).showToast();
+        break
+       case 'purple':
+        root.style.setProperty('--bg', 'purple')
+        root.style.setProperty('--bg-text-c', 'white')
+        Toastify({ text: "Theme Changed to Purple!", backgroundColor: "purple",}).showToast();
+        break
+       case 'pink':
+        root.style.setProperty('--bg', '#ff6699')
+        root.style.setProperty('--bg-text-c', 'white')
+        Toastify({ text: "Theme Changed to Pink!", backgroundColor: "#ff6699",}).showToast();
+        break
+    }
+  }
+
+  const fontBtns = document.querySelectorAll('.font > button')
+
+  fontBtns.forEach((btn) => {
+    btn.addEventListener('click', handleFontUpdate)
+  })
+
+  function handleFontUpdate(e) {
+    switch(e.target.value) {
+      case 'raleway':
+        root.style.setProperty('--font', 'Raleway')
+        Toastify({ text: "Font Changed to Raleway!",}).showToast();
+        break
+      case 'coiny':
+        root.style.setProperty('--font', 'Coiny')
+        Toastify({ text: "Font Changed to Coiny!",}).showToast();
+        break
+      case 'Orbitron':
+        root.style.setProperty('--font', 'Orbitron')
+        Toastify({ text: "Font Changed to Orbitron!",}).showToast();
+        break
+       case 'SIL':
+        root.style.setProperty('--font', 'Shadows Into Light')
+        Toastify({ text: "Font Changed to Shadows Into Light!",}).showToast();
+        break
+       case 'ZCOQ':
+        root.style.setProperty('--font', 'ZCOOL QingKe HuangYou')
+        Toastify({ text: "Font Changed to ZCCOL QingKe HuangYou!",}).showToast();
+        break
+        case 'Arial':
+        root.style.setProperty('--font', 'Arial')
+        Toastify({ text: "Font Changed to Arial!",}).showToast();
+        break
+        case 'TNR':
+        root.style.setProperty('--font', 'Times New Romans')
+        Toastify({ text: "Font Changed to TNR!",}).showToast();
+        break
+        case 'Roboto':
+        root.style.setProperty('--font', 'Roboto')
+        Toastify({ text: "Font Changed to Roboto!",}).showToast();
+        break
+        case 'CS':
+        root.style.setProperty('--font', 'Coming Soon')
+        Toastify({ text: "Font Changed to Coming Soon!",}).showToast();
+        break
+       case 'ASC':
+        root.style.setProperty('--font', 'Amatic SC')
+        Toastify({ text: "Font Changed to Amatic SC!",}).showToast();
+        break
+       case 'IF':
+        root.style.setProperty('--font', 'Indie Flower')
+        Toastify({ text: "Font Changed to Indie Flower!",}).showToast();
+        break
+       case 'Lobster':
+        root.style.setProperty('--font', 'Lobster')
+        Toastify({ text: "Font Changed to Lobster!",}).showToast();
+        break
+       case 'Pacifico':
+        root.style.setProperty('--font', 'Pacifico')
+        Toastify({ text: "Font Changed to Pacifico!",}).showToast();
+        break
+       case 'Srisakdi':
+        root.style.setProperty('--font', 'Srisakdi')
+        Toastify({ text: "Font Changed to Srisakdi!",}).showToast();
+        break
+       case 'Teko':
+        root.style.setProperty('--font', 'Teko')
+        Toastify({ text: "Font Changed to Teko!",}).showToast();
+        break
+       case 'SE':
+        root.style.setProperty('--font', 'Special Elite')
+        Toastify({ text: "Font Changed to Special Elite!",}).showToast();
+        break
+       case 'PS':
+        root.style.setProperty('--font', 'Pinyon Script')
+        Toastify({ text: "Font Changed to Pinyon Script!",}).showToast();
+        break
+       case 'Sacramento':
+        root.style.setProperty('--font', 'Sacramento')
+        Toastify({ text: "Font Changed to Sacramento!",}).showToast();
+        break
+       case 'Asul':
+        root.style.setProperty('--font', 'Asul')
+        Toastify({ text: "Font Changed to Asul!",}).showToast();
+        break
+       case 'CO':
+        root.style.setProperty('--font', 'Concert One')
+        Toastify({ text: "Font Changed to Concert One!",}).showToast();
+        break
+       case 'Fruktur':
+        root.style.setProperty('--font', 'Fruktur')
+        Toastify({ text: "Font Changed to Fruktur!",}).showToast();
+        break
+       case 'Kavoon':
+        root.style.setProperty('--font', 'Kavoon')
+        Toastify({ text: "Font Changed to Kavoon!",}).showToast();
+        break
+       case 'SM':
+        root.style.setProperty('--font', 'Space Mono')
+        Toastify({ text: "Font Changed to Space Mono!",}).showToast();
+        break
+       case 'Tillana':
+        root.style.setProperty('--font', 'Tillana')
+        Toastify({ text: "Font Changed to Tillana!",}).showToast();
+        break
+    }
+  }
+
+  const sizeBtns = document.querySelectorAll('.size > button')
+
+  sizeBtns.forEach((btn) => {
+    btn.addEventListener('click', handleSizeUpdate)
+  })
+
+  function handleSizeUpdate(e) {
+    switch(e.target.value) {
+      case 'a1':
+        root.style.setProperty('--size', '40vh')
+        root.style.setProperty('--size2', '20vh')
+        Toastify({ text: "Size is now changed automatically to your screen height!",}).showToast();
+        break
+      case 'a2':
+        root.style.setProperty('--size', '20vw')
+        root.style.setProperty('--size2', '10vw')
+        Toastify({ text: "Size is now changed automatically to your screen width!",}).showToast();
+        break
+      case 'small':
+        root.style.setProperty('--size', '2em')
+        root.style.setProperty('--size2', '1em')
+        Toastify({ text: "Size changed to small!",}).showToast();
+        break
+       case 'medium':
+        root.style.setProperty('--size', '8em')
+        root.style.setProperty('--size2', '4em')
+        Toastify({ text: "Size changed to medium!",}).showToast();
+        break
+       case 'large':
+        root.style.setProperty('--size', '12em')
+        root.style.setProperty('--size2', '6em')
+        Toastify({ text: "Size changed to large!",}).showToast();
+        break
+       case 'xlarge':
+        root.style.setProperty('--size', '16em')
+        root.style.setProperty('--size2', '8em')
+        Toastify({ text: "Size changed to extra large!",}).showToast();
+        break
+       case 'huge':
+        root.style.setProperty('--size', '20em')
+        root.style.setProperty('--size2', '10em')
+        Toastify({ text: "Size changed to huge!",}).showToast();
+        break
+       case 'insane':
+        root.style.setProperty('--size', '25em')
+        root.style.setProperty('--size2', '12.5em')
+        Toastify({ text: "Size changed to insane!!",}).showToast();
+        break
+    }
+  }
+
+
+  const alignBtns = document.querySelectorAll('.align > button')
+
+  alignBtns.forEach((btn) => {
+    btn.addEventListener('click', handleAlignUpdate)
+  })
+
+  function handleAlignUpdate(e) {
+    switch(e.target.value) {
+      case 'left':
+        root.style.setProperty('--align', 'left')
+        Toastify({ text: "Text now aligned to the left!",}).showToast();
+        break
+      case 'center':
+        root.style.setProperty('--align', 'center')
+        Toastify({ text: "Text now aligned to the center!",}).showToast();
+        break
+      case 'right':
+        root.style.setProperty('--align', 'right')
+        Toastify({ text: "Text now aligned to the right!",}).showToast();
+        break
+    }
+  }
+
+
+  // Get the modal
+  var modal = document.getElementById('myModal');
+
+  // Get the button that opens the modal
+  var btn = document.getElementById("Customize");
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks the button, open the modal
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+
+
+  function hideShow() {
+    var x = document.getElementById("buttons");
+    if (x.style.display === "none") {
+      x.style.display = "block";}
+    else {x.style.display = "none";}}
+
+  function hSS() {
+    var x = document.getElementById("mydiv");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+  function hSSS() {
+    var x = document.getElementById("ind");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+    } else {
+      x.style.display = "none";
+    }
+  }
+
+
+  // Make the DIV element draggable:
+  dragElement(document.getElementById("mydiv"));
+
+  function dragElement(elmnt) {
+    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+    if (document.getElementById(elmnt.id + "header")) {
+      // if present, the header is where you move the DIV from:
+      document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+    } else {
+      // otherwise, move the DIV from anywhere inside the DIV:
+      elmnt.onmousedown = dragMouseDown;
+    }
+
+    function dragMouseDown(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // get the mouse cursor position at startup:
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      document.onmouseup = closeDragElement;
+      // call a function whenever the cursor moves:
+      document.onmousemove = elementDrag;
+    }
+
+    function elementDrag(e) {
+      e = e || window.event;
+      e.preventDefault();
+      // calculate the new cursor position:
+      pos1 = pos3 - e.clientX;
+      pos2 = pos4 - e.clientY;
+      pos3 = e.clientX;
+      pos4 = e.clientY;
+      // set the element's new position:
+      elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+      elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+    }
+
+    function closeDragElement() {
+      // stop moving when mouse button is released:
+      document.onmouseup = null;
+      document.onmousemove = null;
+    }
+  }
+
+
+
+
+  Toastify({ text: "Note! This works the best on chrome", backgroundColor: "red", duration: 8000,}).showToast();
+
+  Toastify({ text: "Hello, Thank you for using my clock! Have fun!", duration: 5000,}).showToast();
+
+  function startup(){
+    document.getElementById("helpBtn").style.display = "none";
+
+    document.getElementById("helpBtn").disabled = true;
+    Toastify({ text: "To customize the clock click the customize button on the left!", duration: 5000, backgroundColor: "linear-gradient(to right, red, darkred)",}).showToast();
+    setTimeout(startup2, 2000)
+  }
+  function startup2(){
+    Toastify({ text: "To hide some of the extra content use the Hide/Show Buttons on the bottom right!", duration: 5000, backgroundColor: "linear-gradient(to right, orange, darkorange)",}).showToast();
+    setTimeout(startup3, 2000)
+  }
+  function startup3(){
+    Toastify({ text: "Click here to go to my website!", duration: 8000, destination: "https://codepen.io/Crazycorgi/full/LqGWGz",
+    newWindow: true,}).showToast();
+    setTimeout(startup4, 2000)
+  }
+
+  function startup4(){
+    Toastify({ text: "Click the suggestion button on the left to make a suggestion!", duration: 8000, destination: "https://goo.gl/forms/ZyxM7jB12CGnhVIu1",
+    newWindow: true,}).showToast();
+    setTimeout(startup5, 2000)
+  }
+  function startup5(){
+    Toastify({ text: "If there is a running poll click the poll button on the left to vote!!", duration: 12000, destination: "https://goo.gl/forms/myWvilzFGvFWgOqk2",
+    newWindow: true, backgroundColor: "linear-gradient(to right, red, darkred)",}).showToast();
+    document.getElementById("helpBtn").disabled = false;
+  }
+
+  Toastify({text: "Added a help button for the text shadow!", duration: 8000, positionLeft: true, backgroundColor: "orange",}).showToast();
+
+  Toastify({text: "Big Update!!!! Text Shadows have been added!!!!", duration: 8000, positionLeft: true, backgroundColor: "#2C2F33", }).showToast();
+
+
+  Toastify({text: "Added a help button!", duration: 8000, positionLeft: true, backgroundColor: "#2C2F33", }).showToast();
+
+  Toastify({text: "Added a new notification system!", duration: 8000, positionLeft: true, backgroundColor: "#2C2F33", }).showToast();
+
+  Toastify({text: "______Changelog:______", duration: 8000, positionLeft: true, backgroundColor: "linear-gradient(to right, red, darkred)",}).showToast();
+
+
+
+  function changeTextShadow() {
+    var txt;
+    var applyTextShadowColor = prompt('What would you like the text shadow to be?');
+    document.documentElement.style.textShadow= applyTextShadowColor;
+    txt = "Current Shadow: " + applyTextShadowColor;
+    document.getElementById("current").innerHTML = txt;
+  }
+
+  document.getElementById("copyy").style.display = "none";
+
+  function suggest(sug){
+    var sug;
+    document.getElementById("suggested").innerHTML = "Suggested Color: " + sug;
+    document.getElementById("copyy").style.display = "block";
+  }
+</script>
