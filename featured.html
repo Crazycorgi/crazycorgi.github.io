@@ -10,9 +10,21 @@
 </ul>
 </body>
 
+<h1 class="title">The Gaming Box</h1>
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+
+  .title{
+  	font-family: raleway;
+  	color: white;
+  	padding-left: 16px;
+  	opacity: 0;
+  	animation: fadein 1s forwards;
+  	animation-iteration-count: 1;
+  	animation-delay: .5s;
+  	position: absolute;
+  }
 
 body{
 	background-color: #2C2F33;
@@ -49,4 +61,9 @@ body{
 	.active {
 	  background-color: #4CAF50;
 	}
+
+  @keyframes fadein {
+    from {top:100; opacity: 0}
+    to {top: 0; opacity: 1}
+  }
 </style>
