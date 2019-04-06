@@ -48,6 +48,8 @@ body{
 	  overflow: hidden;
 	  background-color: grey;
 		transition-duration: 0.4s;
+		animation: slide 1s;
+		animation-iteration-count: 1;
 	}
 
 	li {
@@ -63,7 +65,8 @@ body{
 	  text-decoration: none;
 		transition-duration: 0.4s;
 		font-family: Raleway;
-		animation: slide 1s 1;
+		animation: slide 1s;
+		animation-iteration-count: 1;
 	}
 
 	li a:hover:not(.active) {
@@ -75,8 +78,8 @@ body{
 	}
 
 	@keyframes slide {
-		from {top: -100px;}
-    to {top: 0px;}
+		from {top: -100px; opacity: 0}
+    to {top: 0px; opacity: 1}
 	}
 
 </style>
