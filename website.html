@@ -5,6 +5,14 @@
   <meta charset="UTF-8">
   <title>Website</title>
 </head>
+<body>
+<ul>
+  <li><a class="nav" href="https://crazycorgi.github.io/">Home</a></li>
+  <li><a class="nav" href="https://crazycorgi.github.io/clock">Clock</a></li>
+  <li><a class="nav" href="https://crazycorgi.github.io/test">Test Page</a></li>
+  <li><a class="nav active" href="https://crazycorgi.github.io/website">Website</a></li>
+</ul>
+</body>
 
 <body>
 
@@ -408,6 +416,39 @@
     color: white !important;
   }
   .about:focus {color: blue}
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+    transition-duration: 0.4s;
+  }
+
+  li {
+    float: left;
+    transition-duration: 0.4s;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    font-family: Raleway;
+  }
+
+  li a:hover:not(.active) {
+    background-color: darkgrey;
+  }
+
+  .active {
+    background-color: #4CAF50;
+  }
+
 
   @keyframes r {
     0%   {color: red;    }
