@@ -114,9 +114,13 @@ body{
     position: absolute;
     top: 350px;
     left: 20px;
-    animation: fadein 1s forwards;
+    animation: fadeins 1s forwards;
     animation-iteration-count: 1;
-    animation-delay: 1.5s;
+    animation-delay: 3s;
+  }
+  @keyframes fadeins {
+    from {top: 450; opacity: 0}
+    to {top: 350; opacity: 1}
   }
   .sub:hover {
     background-color: #ff3838;
