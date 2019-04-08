@@ -21,7 +21,7 @@
         <select id="list" onchange="getSelectValue();">
             <option value="#2C2F33">Default</option>
             <option value="black">Black</option>
-            <option value="white">White</option>
+            <option value="#FFCF9E">Light Orange</option>
             <option value="#3affb3">Light Green</option>
             <option value="#B3E5FC">Light Blue</option>
         </select>
@@ -31,11 +31,6 @@
         {
             var selectedValue = document.getElementById("list").value;
             document.body.style.backgroundColor = selectedValue;
-            if (getSelectValue = black){
-              document.body.style.color = white;
-            } else{
-              document.body.style.color = black;
-            }
         }
         getSelectValue();
 
