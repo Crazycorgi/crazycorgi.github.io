@@ -15,6 +15,28 @@
 <p class="desc">
   Enter the box and watch as I review, play and vlog video games!!</p>
 <a class="sub sub1" href="https://www.youtube.com/channel/UC61Bvu-yJqoggdTaUPTQKnQ/" target="_blank">Subscribe</a>
+<html>
+    <body>
+
+        <select id="list" onchange="getSelectValue();">
+            <option>Select...</option>
+            <option value="black">Black</option>
+            <option value="white">White</option>
+            <option value="#3affb3">Light Green</option>
+            <option value="#B3E5FC">Light Blue</option>
+        </select>
+    <script>
+
+        function getSelectValue()
+        {
+            var selectedValue = document.getElementById("list").value;
+            document.body.style.backgroundColor = selectedValue;
+        }
+        getSelectValue();
+
+    </script>
+    </body>
+</html>
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
