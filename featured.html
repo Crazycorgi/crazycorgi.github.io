@@ -19,7 +19,7 @@
     <body>
 
         <select id="list" onchange="getSelectValue();">
-            <option>Select...</option>
+            <option value="#2C2F33">Default</option>
             <option value="black">Black</option>
             <option value="white">White</option>
             <option value="#3affb3">Light Green</option>
@@ -33,6 +33,12 @@
             document.body.style.backgroundColor = selectedValue;
         }
         getSelectValue();
+        if (getSelectValue = black){
+          document.body.style.color = white;
+        } else{
+          document.body.style.color = black;
+        }
+
 
     </script>
     </body>
