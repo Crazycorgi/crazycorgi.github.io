@@ -17,7 +17,6 @@
 <a class="sub sub1" href="https://www.youtube.com/channel/UC61Bvu-yJqoggdTaUPTQKnQ/" target="_blank">Subscribe</a>
 <html>
     <body>
-
         <select id="list" onchange="getSelectValue();">
             <option value="#2C2F33">Default</option>
             <option value="black">Black</option>
@@ -42,6 +41,15 @@
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+
+  #list{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    animation: fi 1s forwards;
+    animation-iteration-count: 1;
+    animation-delay: 1.25s;
+  }
 
   .title{
   	font-family: raleway;
@@ -118,6 +126,11 @@ body{
   @keyframes fadein {
     from {top: 200; opacity: 0}
     to {top: 100; opacity: 1}
+  }
+
+  @keyframes fi {
+    from {opacity: 0}
+    to {opacity: 1}
   }
 
   .sub {
