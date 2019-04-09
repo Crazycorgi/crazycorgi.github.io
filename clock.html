@@ -2,6 +2,51 @@
 <html lang="en" >
 <link rel="shortcut icon" href="http://halifax-translation.com/wp-content/uploads/2015/11/chec_in_4.png" type="image/x-icon" />
 
+<body>
+<ul id="navbar">
+  <li><a class="nav" href="https://crazycorgi.github.io/">Home</a></li>
+  <li><a class="nav active" href="https://crazycorgi.github.io/clock">Clock</a></li>
+  <li><a class="nav" href="https://crazycorgi.github.io/test">Test Page</a></li>
+  <li><a class="nav" href="https://crazycorgi.github.io/website">Website</a></li>
+  <li><a class="nav" href="https://crazycorgi.github.io/featured">Featured Youtubers</a></li>
+</ul>
+</body>
+
+
+<style>
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: grey;
+		transition-duration: 0.4s;
+	}
+
+	li {
+	  float: left;
+		transition-duration: 0.4s;
+	}
+
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+		transition-duration: 0.4s;
+		font-family: Raleway;
+	}
+
+	li a:hover:not(.active) {
+	  background-color: darkgrey;
+	}
+
+	.active {
+	  background-color: #0087ff;
+	}
+
+</style>
 
 <head>
   <meta charset="UTF-8">
@@ -918,9 +963,13 @@
 
   function hideShow() {
     var x = document.getElementById("buttons");
+    var y = document.getElementById("navbar");
     if (x.style.display === "none") {
-      x.style.display = "block";}
-    else {x.style.display = "none";}}
+      x.style.display = "block";
+      y.style.display = "block"}
+    else {x.style.display = "none";
+          y.style.display = "none"
+  }}
 
   function hSS() {
     var x = document.getElementById("mydiv");
