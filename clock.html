@@ -157,7 +157,7 @@
       <h2>Text Shadow</h2>
 
 
-  <button class="apply" onclick="changeTextShadow()" title="Change the shadow"><i class='fas fa-check-circle' style="padding-right: .5em;"></i>Change Text Shadow</button>
+      <input id="tb" name="teb" oninput="changeTextShadow()" />
       <br> <br>
       <a class="help" href="https://codepen.io/Crazycorgi/full/QPbrXy" target="_blank" title="Help for shadow">Help<i class='fas fa-question' style="padding-left: .5em;"></i></a>
 
@@ -1084,11 +1084,13 @@
 
   function changeTextShadow() {
     var txt;
-    var applyTextShadowColor = prompt('What would you like the text shadow to be?');
+    var applyTextShadowColor = document.getElementById("tb").value;
     document.documentElement.style.textShadow= applyTextShadowColor;
     txt = "Current Shadow: " + applyTextShadowColor;
     document.getElementById("current").innerHTML = txt;
   }
+
+
 
   document.getElementById("copyy").style.display = "none";
 
