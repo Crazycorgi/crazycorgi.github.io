@@ -1,96 +1,105 @@
 <title>Home</title>
 
 <body>
-<ul>
-  <li><a class="nav active" href="https://crazycorgi.github.io">Home</a></li>
-  <li><a class="nav" href="https://crazycorgi.github.io/clock">Clock</a></li>
-  <li><a class="nav" href="https://crazycorgi.github.io/test">Test Page</a></li>
-  <li><a class="nav" href="https://crazycorgi.github.io/website">Website</a></li>
-  <li><a class="nav" href="https://crazycorgi.github.io/featured">Featured Youtubers</a></li>
-</ul>
+  <ul>
+    <li><a class="nav active" href="https://crazycorgi.github.io">Home</a></li>
+    <li><a class="nav" href="https://crazycorgi.github.io/clock">Clock</a></li>
+    <li><a class="nav" href="https://crazycorgi.github.io/test">Test Page</a></li>
+    <li><a class="nav" href="https://crazycorgi.github.io/website">Website</a></li>
+    <li><a class="nav" href="https://crazycorgi.github.io/featured">Featured Youtubers</a></li>
+  </ul>
 </body>
-  <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/768px-Home-icon.svg.png"/>
+
+<link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Home-icon.svg/768px-Home-icon.svg.png" />
+
 <h1 class="title"><b>About:</b></h1>
 <p class="about">I started out on w3schools coding tiny things and learning basic html.<br />
-I then found a website named https://codepen.io and started using that.<br />
-I made a website with links to some stuff my friend and I made.<br />
-I then decided to make a clock. That clock was the biggest project I had done and I loved it!<br><br>
+  I then found a website named https://codepen.io and started using that.<br />
+  I made a website with links to some stuff my friend and I made.<br />
+  I then decided to make a clock. That clock was the biggest project I had done and I loved it!<br><br>
 
-My favorite language out of HTML, CSS, and JS is CSS!<br><br>
+  My favorite language out of HTML, CSS, and JS is CSS!<br><br>
 
-Well thats it! I am not that great at coding but I enjoy it and am learning!<br><br>
+  Well thats it! I am not that great at coding but I enjoy it and am learning!<br><br>
 
-Have a good day!</p>
+  Have a good day!</p>
 
 <style>
   @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
 
-.title{
-	font-family: raleway;
-	color: white;
-	padding-left: 16px;
-	opacity: 0;
-	animation: fadein 1s forwards;
-	animation-iteration-count: 1;
-	animation-delay: .5s;
-	position: relative;
-}
-
-.about{
-	font-family: Roboto;
-	font-size: 1em;
-	color: white;
-	padding-left: 16px;
-	opacity: 0;
-	animation: fadein 1s forwards;
-	animation-iteration-count: 1;
-	animation-delay: 1.5s;
-	position: relative;
-}
-
-body{
-	background-color: #2C2F33;
-}
-
-	ul {
-	  list-style-type: none;
-	  margin: 0;
-	  padding: 0;
-	  overflow: hidden;
-	  background-color: grey;
-		transition-duration: 0.4s;
-	}
-
-	li {
-	  float: left;
-		transition-duration: 0.4s;
-	}
-
-	li a {
-	  display: block;
-	  color: white;
-	  text-align: center;
-	  padding: 14px 16px;
-	  text-decoration: none;
-		transition-duration: 0.4s;
-		font-family: Raleway;
-	}
-
-	li a:hover:not(.active) {
-	  background-color: darkgrey;
-	}
-
-	.active {
-	  background-color: #0087ff;
-	}
-
-	@keyframes fadein {
-		from {top:100; opacity: 0}
-    to {top: 0; opacity: 1}
-	}
-  ::selection {
-  background-color: #00af51;
-  color: #fff;
+  .title {
+    font-family: raleway;
+    color: white;
+    padding-left: 16px;
+    opacity: 0;
+    animation: fadein 1s forwards;
+    animation-iteration-count: 1;
+    animation-delay: .5s;
+    position: relative;
   }
 
+  .about {
+    font-family: Roboto;
+    font-size: 1em;
+    color: white;
+    padding-left: 16px;
+    opacity: 0;
+    animation: fadein 1s forwards;
+    animation-iteration-count: 1;
+    animation-delay: 1.5s;
+    position: relative;
+  }
+
+  body {
+    background-color: #2C2F33;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: grey;
+    transition-duration: 0.4s;
+  }
+
+  li {
+    float: left;
+    transition-duration: 0.4s;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    font-family: Raleway;
+  }
+
+  li a:hover:not(.active) {
+    background-color: darkgrey;
+  }
+
+  .active {
+    background-color: #0087ff;
+  }
+
+  @keyframes fadein {
+    from {
+      top: 100;
+      opacity: 0
+    }
+
+    to {
+      top: 0;
+      opacity: 1
+    }
+  }
+
+  ::selection {
+    background-color: #00af51;
+    color: #fff;
+  }
 </style>
