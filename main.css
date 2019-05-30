@@ -490,3 +490,186 @@ section.fourth:hover {
 .visit:focus {
   color: blue;
 }
+
+/* Extra small devices (phones, 600px and down) */
+/*@media only screen and (max-width: 425px) {
+  .desc {
+    color: white;
+    text-align: center;
+    font-family: Raleway;
+    font-size: .5em;
+  }
+
+  .title {
+    color: white;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 1em;
+    clear: right;
+    position: relative;
+  }
+}*/
+@media only screen and (max-width: 768px) {
+  .desc {
+    color: white;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 1.8em;
+  }
+
+  .title {
+    color: white;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 3em;
+    clear: right;
+    position: relative;
+  }
+
+  section.first {
+    background: rgb(4, 50, 61);
+    padding-top: 1em;
+    height: calc(100vh - 1em);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://i1.wp.com/techbeasts.com/wp-content/uploads/2016/12/mountain-3d-wallpaper-8.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  .ytflex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    height: auto;
+    /* Or whatever */
+  }
+
+  .sub1 {
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    transition: 0.5s;
+    border-radius: 5px;
+    width: 20em;
+    background-color: red;
+  }
+
+  .sub1cont {
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  .sub2 {
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    transition: 0.5s;
+    border-radius: 5px;
+    width: 20em;
+    background-color: red;
+  }
+
+  .sub2cont {
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  .sub3 {
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    transition: 0.5s;
+    border-radius: 5px;
+    width: 20em;
+    background-color: red;
+  }
+
+  .sub3cont {
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  section.fourth {
+    background: #042833;
+    padding-top: 1em;
+    height: calc(225vh - 1em);
+    transition-duration: .5s;
+  }
+
+  .proflex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+    height: auto;
+    /* Or whatever */
+  }
+
+  .pro1 {
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    transition: 0.5s;
+    border-radius: 5px;
+    width: 20em;
+    background-color: grey;
+  }
+
+  .pro1cont {
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  .pro2 {
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    transition: 0.5s;
+    border-radius: 5px;
+    width: 20em;
+    background-color: grey;
+  }
+
+  .pro2cont {
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  .pro3 {
+    /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+    transition: 0.5s;
+    border-radius: 5px;
+    width: 20em;
+    background-color: grey;
+  }
+
+  .pro3cont {
+    padding: 2px 8px;
+    border-radius: 5px;
+    margin: auto;
+  }
+
+  section.third {
+    background: rgb(4, 50, 61);
+    padding-top: 1em;
+    height: calc(225vh - 1em);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://wallpapertag.com/wallpaper/full/0/6/3/49612-mountains-wallpaper-1920x1080-for-android-40.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  section.fourth {
+    background: #042833;
+    padding-top: 1em;
+    height: calc(300vh - 1em);
+    transition-duration: .5s;
+  }
+
+  section.third {
+    background: rgb(4, 50, 61);
+    padding-top: 1em;
+    height: calc(300vh - 1em);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://wallpapertag.com/wallpaper/full/0/6/3/49612-mountains-wallpaper-1920x1080-for-android-40.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+  }
+}
