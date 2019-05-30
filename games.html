@@ -1,0 +1,104 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="author" content="Crazycorgi">
+  <meta name="description" content="games that me and my friend made">
+  <meta name="keywords" content="Games">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Games</title>
+  <link rel="shortcut icon" href="https://cdn0.iconfinder.com/data/icons/social-messaging-productivity-1-1/128/game-controller-4-512.png">
+  </head>
+
+  <body>
+    <p class="cs">comming soon</p>
+  </body>
+</html>
+
+
+<div id="mySidenav" class="sidenav">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fas fa-times"></i></a>
+  <a href="/index.html" class="active">Home</a>
+  <a href="/games.html">Games</a>
+  <a href="/clock.html">Clock</a>
+  <a href="/website.html">Old Website</a>
+</div>
+<span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars"></i></span>
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    font-family: Roboto;
+  }
+
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  .open {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    color: grey;
+    transition-duration: .5s;
+  }
+
+  .open:hover {
+    color: white;
+  }
+  @media screen and (max-height: 450px) {
+    .sidenav {
+      padding-top: 15px;
+    }
+
+    .sidenav a {
+      font-size: 18px;
+    }
+  }
+
+  body {
+    background-color: #2C2F33;
+  }
+  .cs {
+    font-family: Arial;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+  }
+</style>
+<script>
+  function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+  }
+</script>

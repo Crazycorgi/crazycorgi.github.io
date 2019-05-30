@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
+
+/*
+html {
+  scroll-behavior: smooth;
+}*/
+.title {
+  color: white;
+  text-align: center;
+  font-family: Roboto;
+  font-size: 4em;
+  clear: right;
+  position: relative;
+}
+
+.start {
+  -webkit-animation: slidefade 1s ease-out backwards;
+  -moz-animation: slidefade 1s ease-out forwards;
+  -ms-animation: slidefade 1s ease-out forwards;
+  -o-animation: slidefade 1s ease-out forwards;
+  animation: slidefade 1s ease-out forwards;
+}
+
+::selection {
+  background-color: #00af51;
+  color: #fff;
+}
+
+@-moz-keyframes slidefade {
+  from {
+    opacity: 0;
+    left: -1000px;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+@-webkit-keyframes slidefade {
+  from {
+    opacity: 0;
+    left: -50vw;
+  }
+
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
+
+.desc {
+  color: white;
+  padding-top: 2em;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 2em;
+}
+
+.desc2 {
+  color: white;
+  padding-top: 1px;
+  text-align: center;
+  font-family: Raleway;
+  font-size: 1.5em;
+  position: relative;
+}
+
+.title::after {
+  content: "";
+  position: absolute;
+  border-top: 1px solid white;
+  left: 49.6%;
+  bottom: 0;
+  margin-left: -15px;
+  width: 50px;
+  height: 0px;
+}
+
+body {
+  margin: 0;
+  background-color: #2C2F33;
+}
+
+section {
+  height: 100vh;
+}
+
+section.first {
+  background: rgb(4, 50, 61);
+  padding-top: 3em;
+  height: calc(100vh - 3em);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://i1.wp.com/techbeasts.com/wp-content/uploads/2016/12/mountain-3d-wallpaper-8.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+section.second {
+  background: #042833;
+  padding-top: 3em;
+  height: calc(100vh - 3em);
+  transition-duration: .5s;
+}
+
+section.second:hover {
+  box-shadow: 0px -2px 15px 0px black;
+}
+
+section.third {
+  background: rgb(4, 50, 61);
+  padding-top: 1em;
+  height: calc(150vh - 1em);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://wallpapertag.com/wallpaper/full/0/6/3/49612-mountains-wallpaper-1920x1080-for-android-40.jpg);
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+section.fourth {
+  background: #042833;
+  padding-top: 1em;
+  height: calc(150vh - 1em);
+  transition-duration: .5s;
+}
+
+section.fourth:hover {
+  box-shadow: 0px -2px 15px 0px black;
+}
+
+.yt {
+  color: red;
+  text-decoration: none;
+  transition-duration: .5s;
+}
+
+.yt:hover {
+  text-decoration: underline;
+}
+
+.twit {
+  color: aqua;
+  text-decoration: none;
+  transition-duration: .5s;
+}
+
+.twit:hover {
+  text-decoration: underline;
+}
+
+.mail {
+  color: white;
+  text-decoration: none;
+  transition-duration: .5s;
+}
+
+.mail:hover {
+  text-decoration: underline;
+}
+
+.twitch {
+  color: #6441A4;
+  text-decoration: none;
+  transition-duration: .5s;
+}
+
+.twitch:hover {
+  text-decoration: underline;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  font-family: Roboto;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+
+  .sidenav a {
+    font-size: 18px;
+  }
+}
+
+.open {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  color: grey;
+  transition-duration: .5s;
+}
+
+.open:hover {
+  color: white;
+}
+
+.ytname {
+  color: white;
+  font-family: Roboto;
+  font-size: 1.4em;
+  padding-left: 20px;
+}
+
+.ytdesc {
+  color: white;
+  font-family: Raleway;
+  font-size: 1.2em;
+  padding-left: 20px;
+  padding-bottom: 12px;
+}
+
+.sub {
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: .4s;
+  outline: none;
+  font-family: arial;
+  border: 2px solid white;
+}
+
+.sub:hover {
+  color: red;
+  background-color: white;
+}
+
+.sub:focus {
+  color: blue;
+}
+
+.padding {
+  padding-left: 20px;
+}
+
+.padbot {
+  padding-bottom: 1em;
+}
+
+.foot1 {
+  font-family: Roboto;
+  font-size: 1.2em;
+  color: white;
+  grid-area: foot1;
+  padding-left: 1em;
+}
+
+.foot2 {
+  font-family: Roboto;
+  font-size: 1.2em;
+  color: white;
+  text-align: right;
+  grid-area: foot3;
+  padding-right: 1em;
+}
+
+.foot {
+  display: grid;
+  grid-template-areas:
+    'foot1 . foot2 . foot3'
+    'foot4 . foot5 . foot6';
+  background-color: #2C2F33;
+}
+
+.ytflex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  height: auto;
+  /* Or whatever */
+}
+
+.sub1 {
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+  transition: 0.5s;
+  border-radius: 5px;
+  width: 30%;
+  background-color: red;
+}
+
+.sub1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sub1cont {
+  padding: 2px 16px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.subicon1 {
+  padding-top: 1em;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.sub2 {
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+  transition: 0.5s;
+  border-radius: 5px;
+  width: 30%;
+  background-color: red;
+}
+
+.sub2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sub2cont {
+  padding: 2px 16px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.subicon2 {
+  padding-top: 1em;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.sub3 {
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+  transition: 0.5s;
+  border-radius: 5px;
+  width: 30%;
+  background-color: red;
+}
+
+.sub3:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sub3cont {
+  padding: 2px 16px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.subicon3 {
+  padding-top: 1em;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.red {
+  color: red;
+}
+
+.proflex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: stretch;
+  height: auto;
+  /* Or whatever */
+}
+
+.pro1 {
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+  transition: 0.5s;
+  border-radius: 5px;
+  width: 30%;
+  background-color: grey;
+}
+
+.pro1:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pro1cont {
+  padding: 2px 16px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.proicon1 {
+  padding-top: 1em;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.pro2 {
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+  transition: 0.5s;
+  border-radius: 5px;
+  width: 30%;
+  background-color: grey;
+}
+
+.pro2:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pro2cont {
+  padding: 2px 16px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.proicon2 {
+  padding-top: 1em;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.pro3 {
+  /*box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);*/
+  transition: 0.5s;
+  border-radius: 5px;
+  width: 30%;
+  background-color: grey;
+}
+
+.pro3:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.pro3cont {
+  padding: 2px 16px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.proicon3 {
+  padding-top: 1em;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.grey {
+  color: grey;
+}
+
+.visit {
+  color: white;
+  padding: 15px 32px;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: .4s;
+  outline: none;
+  font-family: arial;
+  border: 2px solid white;
+}
+
+.visit:hover {
+  color: grey;
+  background-color: white;
+}
+
+.visit:focus {
+  color: blue;
+}
