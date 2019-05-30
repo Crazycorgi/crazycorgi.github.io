@@ -11,7 +11,7 @@
 	<a href="/website.html">Old Website</a>
 </div>
 
-<span class="open" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars"></i></span>
+<span class="open" id="openBtn" style="font-size:30px;cursor:pointer" onclick="openNav()"><i class="fas fa-bars"></i></span>
 
 <script>
 function openNav() {
@@ -1015,6 +1015,7 @@ function closeNav() {
 
   function hideShow() {
     var x = document.getElementById("buttons");
+		var y = document.getElementById("openBtn");
     if (x.style.display === "none") {
       x.style.display = "block";
       y.style.display = "block"}
