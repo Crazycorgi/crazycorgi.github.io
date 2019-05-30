@@ -2,10 +2,10 @@
 ## [crazycorgi.github.io](https://crazycorgi.github.io)
 
 ### Current sub-pages on https://crazycorgi.github.io
-* [Home](https://crazycorgi.github.io/)
-* [Random Test Page](https://crazycorgi.github.io/text)
+* [Home](https://crazycorgi.github.io/oldindex)
 * [Clock](https://crazycorgi.github.io/clock)
-* [Featured Youtubers](https://crazycorgi.github.io/featured)
+* [Website](https://crazycorgi.github.io/website)
+* [Featured Youtubers](https://crazycorgi.github.io/oldfeatured)
 
 ## About
 I started out on w3schools coding tiny things and learning basic html.
