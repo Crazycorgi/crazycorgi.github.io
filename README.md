@@ -2,7 +2,7 @@
 ## [crazycorgi.github.io](https://crazycorgi.github.io)
 
 ### Current sub-pages on https://crazycorgi.github.io
-* [Home](https://crazycorgi.github.io/oldindex)
+* [Home](https://crazycorgi.github.io)
 * [Clock](https://crazycorgi.github.io/clock)
 * [Website](https://crazycorgi.github.io/website)
 * [Featured Youtubers](https://crazycorgi.github.io/oldfeatured)
