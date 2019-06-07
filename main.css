@@ -698,3 +698,53 @@ section.fourth:hover {
     background-size: cover;
   }
 }
+
+@media only screen and (orientation: landscape) {
+  section.first {
+    background: rgb(4, 50, 61);
+    padding-top: .1em;
+    height: calc(150vh - .1em);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://i1.wp.com/techbeasts.com/wp-content/uploads/2016/12/mountain-3d-wallpaper-8.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  .desc {
+    color: white;
+    text-align: center;
+    font-family: Raleway;
+    font-size: 1em;
+  }
+
+  .title {
+    color: white;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 1.5em;
+    clear: right;
+    position: relative;
+  }
+
+  section.second {
+    background: #042833;
+    padding-top: 1em;
+    height: calc(150vh - 1em);
+    transition-duration: .5s;
+  }
+
+  section.third {
+    background: rgb(4, 50, 61);
+    padding-top: 1em;
+    height: calc(380vh - 1em);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://wallpapertag.com/wallpaper/full/0/6/3/49612-mountains-wallpaper-1920x1080-for-android-40.jpg);
+    background-repeat: repeat;
+    background-size: cover;
+  }
+
+  section.fourth {
+    background: #042833;
+    padding-top: 1em;
+    height: calc(400vh - 1em);
+    transition-duration: .5s;
+  }
+}
