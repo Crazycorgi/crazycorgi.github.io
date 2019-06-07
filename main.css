@@ -699,7 +699,7 @@ section.fourth:hover {
   }
 }
 
-@media only screen and (orientation: landscape) {
+/*@media only screen and (orientation: landscape) {
   section.first {
     background: rgb(4, 50, 61);
     padding-top: .1em;
@@ -747,4 +747,4 @@ section.fourth:hover {
     height: calc(400vh - 1em);
     transition-duration: .5s;
   }
-}
+}*/
