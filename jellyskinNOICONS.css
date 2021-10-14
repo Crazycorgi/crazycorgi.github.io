@@ -1439,7 +1439,7 @@ h2 {
 }
 
 /*Login Page Theming*/
-
+/*
 div#loginPage {
   margin-top: 0 !important;
   position: fixed;
@@ -1719,7 +1719,7 @@ html:not(.layout-mobile) #loginPage .inputContainer {
   border-radius: 5px;
   margin-top: auto;
   margin-bottom: auto;
-}
+} */
 
 /*Theming for the dashboard*/
 
